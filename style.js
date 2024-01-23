@@ -1,3 +1,4 @@
+alert("This is a Basic Protfolio Website.");
 var cursor = document.querySelector("#cursor");
 var main = document.querySelector(".fullwrapper");
 
