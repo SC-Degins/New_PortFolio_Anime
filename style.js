@@ -65,45 +65,45 @@ gsap.from(".card", {
   },
 });
 
-function sendEmail() {
-  console.log("function call");
-  var name = document.getElementById("name").value;
-  var mail = document.getElementById("email").value;
-  var Phone = document.getElementById("number").value;
-  var purpose = document.getElementById("purpose").value;
-  var mess = document.getElementById("mess").value;
+// function sendEmail() {
+//   console.log("function call");
+//   var name = document.getElementById("name").value;
+//   var mail = document.getElementById("email").value;
+//   var Phone = document.getElementById("number").value;
+//   var purpose = document.getElementById("purpose").value;
+//   var mess = document.getElementById("mess").value;
 
-  var body =
-    "Name: " +
-    name +
-    "<br> Email: " +
-    email +
-    "<br> Phone No.: " +
-    number +
-    "<br> Purpose:" +
-    purpose
-    "<br> Subject: " +
-    mess;
+//   var body =
+//     "Name: " +
+//     name +
+//     "<br> Email: " +
+//     email +
+//     "<br> Phone No.: " +
+//     number +
+//     "<br> Purpose:" +
+//     purpose
+//     "<br> Subject: " +
+//     mess;
 
-  Email.send({
-    SecureToken: "db633b7a-4f3d-41d4-a2fc-90cef1da9ded",
-    To: mail,
-    From: "suvamchakrabortirax@gmail.com",
-    Subject: "New Contact form User",
-    Body: body,
-  }).then((message) => {
-    if (message == "OK") {
-      Swal.fire({
-        title: "Successfll!",
-        text: "Your Message Just Send",
-        icon: "success",
-      });
-    } else {
-      Swal.fire({
-        title: "error",
-        text: "Something look Wrong",
-        icon: "error",
-      });
-    }
-  });
-}
+//   Email.send({
+//     SecureToken: "db633b7a-4f3d-41d4-a2fc-90cef1da9ded",
+//     To: mail,
+//     From: "suvamchakrabortirax@gmail.com",
+//     Subject: "New Contact form User",
+//     Body: body,
+//   }).then((message) => {
+//     if (message == "OK") {
+//       Swal.fire({
+//         title: "Successfll!",
+//         text: "Your Message Just Send",
+//         icon: "success",
+//       });
+//     } else {
+//       Swal.fire({
+//         title: "error",
+//         text: "Something look Wrong",
+//         icon: "error",
+//       });
+//     }
+//   });
+// }
