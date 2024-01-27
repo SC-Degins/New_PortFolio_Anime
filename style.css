@@ -5,6 +5,10 @@
     z-index: 99;
     /* cursor: none; */
 }
+@font-face {
+    font-family: Lab;
+    src: url(rebellion-knight-font/RebellionKnightPersonalUseO-ZV4yZ.ttf);
+}
 :root {
     --back:rgb(255, 240, 216);
     --color:rgba(226, 176, 116, 0.32);
@@ -19,12 +23,16 @@
     height: 200vh;
 }
 #cursor {
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     background-color: #00000066;
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     z-index: 999;
+    top: 0px;
+    left: 1px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
     /* transition: all ease 0.3s; */
 }
 #wrapper {
@@ -43,7 +51,7 @@
     padding: 0.5vw 3vw;
     position: fixed;
     background: linear-gradient(rgb(255, 240, 216),rgba(255, 240, 216, 0.639),transparent);
-    z-index: 9999;
+    z-index: 999;
 }
 #loganime {
     position: relative;
@@ -66,7 +74,7 @@
     color: #000;
     font-weight: 600;
     font-family: 'Changa', sans-serif;
-    cursor: none;
+    /* cursor: none; */
     position: relative;
     overflow: hidden;
 }
@@ -202,9 +210,11 @@
     font-size: 5vw;
     /* text-decoration: underline; */
     color: rgb(255, 172, 71);
-    filter: drop-shadow(10px 10px 5px black);
+    font-family: Lab;
+    width: 400px;
+    letter-spacing: 5px;
     -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 0.5px;
 }
 #about-text>p {
     text-align: justify;
@@ -289,12 +299,14 @@
 #form {
     height: 82%;
     width: 70%;
-    background: linear-gradient(rgba(226, 176, 116, 0.32),rgba(226, 176, 116, 0.205),transparent);
+    backdrop-filter: blur(10px);
     box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.161);
     border-radius: 20px;
+    z-index: 99;
     display: flex;
     flex-direction: column;
     margin-bottom: 5vw;
+    border: 2px solid #fff;
     padding-top: 20px;
 }
 .in-box {

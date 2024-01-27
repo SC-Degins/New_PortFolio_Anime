@@ -1,14 +1,14 @@
-alert("This is a Basic Protfolio Website.");
+Swal.fire("This is a Basic Protfolio Website.");
 var cursor = document.querySelector("#cursor");
-var main = document.querySelector(".fullwrapper");
+var main = document.querySelector("body");
 
-main.addEventListener("mousemove",function(dets){
-  gsap.to("#cursor",{
-    x:dets.x,
-    y:dets.y,
-    ease: Expo
-  })
-})
+main.addEventListener("mousemove", function (dets) {
+  gsap.to("#cursor", {
+    x: dets.x,
+    y: dets.y,
+    ease: Expo,
+  });
+});
 
 var a = document.querySelector("#option a:nth-child(1)");
 a.style.color = "rgb(179, 123, 55)";
@@ -29,7 +29,7 @@ gsap.to("#photo img", {
 gsap.from("#about #about-text", {
   scale: 0.5,
   duration: 4,
-  opacity:0,
+  opacity: 0,
   scrollTrigger: {
     trigger: "#about #about-text",
     scroller: "body",
@@ -40,17 +40,17 @@ gsap.from("#about #about-text", {
   },
 });
 
-gsap.from(".nlink",{
-  stagger:.2,
-  y:20,
-  opacity:0,
-  duration:0.3,
-})
+gsap.from(".nlink", {
+  stagger: 0.2,
+  y: 20,
+  opacity: 0,
+  duration: 0.3,
+});
 
 gsap.from("#loganime", {
   opacity: 0,
-  duration:0.5,
-  left:-20
+  duration: 0.5,
+  left: -20,
 });
 
 gsap.from(".card", {
